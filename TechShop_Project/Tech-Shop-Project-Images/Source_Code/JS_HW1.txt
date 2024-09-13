@@ -1,0 +1,66 @@
+1.) In JavaScript, how many data types are there?
+
+Ans: In JavaScript, there are 2 data types available.
+a)Primitive data types which include Number , String , Boolean , Null and Undefined.
+b)Non Primitive which includes Arrays,Object and Functions.
+
+2.) What kind of numbers are represented by the number type in JavaScript?
+
+Ans: In JavaScript, the number type represents both integer and floating-point values using the double precision floating -point format, which means that all the numbers ,whether they are integer or fractional parts , are teated as 'number' type only.
+
+3.) What is the limitation of the number data type?
+
+Ans:The main limitation of JavaScript'number' type are:
+a)It has Precision Issue.
+b)It has a range limitation as well and number outside its range loses the precision.
+c)No Separate Integer Type causes inaccuracy .
+
+4.) What are the two possible values of the Boolean data type?
+
+Ans:The two posible values in Boolean Data type are:
+a)True
+b)False
+
+5.) What does the undefined data type represent in JavaScript?
+
+Ans:The undefined data type represents a variable that has been declared but not yet assigned a value.
+
+6.) What are the primitive data types in JavaScript?
+
+Ans:The primitive data types in JavaScript are:
+
+String: Represents a sequence of characters (eg-"hellojee").
+Number: Represents both integers and floating-point numbers (eg- 24, 3.14).
+Boolean: Represents a logical value (true/false).
+Undefined: Indicates a variable that has been declared but not assigned a value.
+Null: Represents the intentional absence of any object value.
+
+7.) What is the difference between a primitive data type and an object data type in JavaScript?
+
+Ans:Primitive data types are inbuild datatypes representing simple , single value with immutable and direct storage , 
+                                         while
+	Object represents complex, mutable DS stored as references.
+	
+8.) What does the NULL data type represent in JavaScript?
+
+Ans:Null data type signifies that a variable has been explicitly set to have no value or to indicate that an object reference is empty or non-existent.
+
+9.) What is the difference between let, var, and const in JavaScript?
+
+Ans:In JS all 3 are used to declare variable only .
+But,
+Var is globally scoped 
+Let is locally accessible within those nearest  declared block
+Const cannot be assigned a new value 
+
+Also 
+VAR can be :   | LET can be                   | CONST can be 
+1:Declared     | 1:Declared                   | 1:Declared
+2:Re Declared  | 2:But Cannot Re Declared     | 2:But Cannot be Re Declared
+3:Assign       | 3:Assign                     | 3:Assigned
+4:Re Assign    | 4:Re Assign                  | 4:But Cannot be Re Assign
+
+10.) How to declare multiple Variables in JavaScript?
+
+Ans:We can use Var Keyword to declare multiple variables at once , separated by commas.
+Eg, var x=2,y=3,z=4,p=7,q=8,r=9;

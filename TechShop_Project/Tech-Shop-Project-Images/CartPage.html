@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Shop Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- CSS STYLING STARTS HERE -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.cart-items {
+    width: 70%;
+    background-color: #242424;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #555555;
+    padding: 20px 0;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cart-item-price {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-price .discounted-price {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.cart-item-price .original-price {
+    text-decoration: line-through;
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background-color: #555555;
+}
+
+.quantity-control .quantity {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.delete-item {
+    cursor: pointer;
+}
+
+.delete-item1 {
+    width: 100px; /* Seting the width */
+    height: 100px; /* Seting the height */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto; /* Centers horizontally if container width is set */
+}
+
+.order-summary {
+    width: 30%;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.order-summary h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-item .value {
+    color: #00FF00;
+}
+
+.summary-item .free {
+    color: #00FF00;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #FF0000;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #e60000;
+}
+    </style>
+<!-- CSS STYLING ENDS HERE -->
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tech-Shop</h1>
+            <div class="nav-links">
+                <a href="#" class="search-icon" data-toggle="tooltip" data-placement="bottom" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="CartPage.html" class="cart-icon" data-toggle="tooltip" title="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <!-- TOOLTIP TO SIGNUP PAGE -->
+                <div class="tooltip">
+                    <i class="fa-regular fa-user"></i>
+                    <div class="tooltiptext">
+                        <h3>Hello!</h3>
+                        <p>Access account and manage orders</p>
+                        <a href="SignupPage.html" class="login-btn">Login / Signup</a>
+                        <p>Please Login</p>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+    </header>
+
+    <!-- Cart Section -->
+
+    <div class="container">
+        <!-- Cart Items Section -->
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="products/products/sonyXb910n-1.png" alt="JBL Live 660NC">
+                <div class="cart-item-details">
+                    <h4>JBL Live 660NC Wireless Over-Ear NC Headphones</h4>
+                </div>
+                <div class="cart-item-price">
+                    <span class="discounted-price">₹9,999</span>
+                    <span class="original-price">₹14,999</span>
+                </div>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="delete-item">🗑️</div>
+            </div>
+    
+            <div class="cart-item">
+                <img src="products/products/boat410-2.png" alt="boAt Rockerz 518">
+                <div class="cart-item-details">
+                    <h4>boAt Rockerz 518 On-Ear Wireless Headphones</h4>
+                </div>
+                <div class="cart-item-price">
+                    <span class="discounted-price">₹1,299</span>
+                    <span class="original-price">₹3,990</span>
+                </div>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="delete-item">🗑️</div>
+            </div>
+    
+            <div class="cart-item">
+                <img src="products/products/jbl100-2.png" alt="boAt Airdopes 131">
+                <div class="cart-item-details">
+                    <h4>boAt Airdopes 131 Wireless In-Ear</h4>
+                </div>
+                <!-- <div class="cart-item-price">
+                    <span class="discounted-price">₹1,299</span>
+                    <span class="original-price">₹2,990</span>
+                </div>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div> -->
+                <div class="delete-item1">🗑️</div>
+            </div>
+        </div>
+    
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <h3>Order Summary (4 items)</h3>
+            <div class="summary-item">
+                <span>Original Price</span>
+                <span>₹22,978</span>
+            </div>
+            <div class="summary-item">
+                <span>Discount</span>
+                <span class="value">-₹10,132</span>
+            </div>
+            <div class="summary-item">
+                <span>Delivery</span>
+                <span class="free">Free</span>
+            </div>
+            <div class="total-price">
+                <span>Total Price</span>
+                <span>₹12,846</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    
+
+    <!-- Footer Part -->
+
+    <div class="footer-content">
+        <div class="subscribe">
+            <h3>Tech-Shop</h3>
+            <p>Subscribe to our Email alerts to receive early discount offers, and new products info.</p>
+            <form>
+                <input type="email" placeholder="Email Address*">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="footer-links">
+            <div class="help">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Cancel Order</a></li>
+                    <li><a href="#">Return Order</a></li>
+                    <li><a href="#">Warranty Info</a></li>
+                </ul>
+            </div>
+
+            <div class="policies">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="company">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Service Centres</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 | All Rights Reserved. Built by <strong>| SWARNIMA GUPTA</p></strong>
+    </div>
+        <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i>
+            <a href="#"><i class="fa-brands fa-twitter"></i>
+            <a href="#"><i class="fa-brands fa-instagram"></i>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    
+</footer>
+</body>
+</html>

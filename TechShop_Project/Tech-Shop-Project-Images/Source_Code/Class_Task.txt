@@ -1,0 +1,108 @@
+1:What is an object?
+
+An object in JavaScript is a collection of key-value pairs, where each key (or property) is associated with a value. It is used to store and manage data in a structured way.
+What is the syntax of an object?
+
+The syntax to create an object is:
+javascript
+
+const obj = {
+  key1: value1,
+  key2: value2,
+  // more key-value pairs
+};
+2:Usages of using an object?
+
+Objects are used for:
+Storing related data and functions together.
+Representing real-world entities like users, products, etc.
+Managing state in applications.
+Organizing and manipulating data.
+
+4:Ways to create an object?
+
+There are several ways to create objects in JavaScript:
+a)Object literal:
+
+const obj = {};
+Constructor function:
+javascript
+
+function MyObject() {
+  this.property = value;
+}
+const obj = new MyObject();
+
+b)Object.create method:
+
+const obj = Object.create(prototype);
+Class syntax (ES6):
+javascript
+Copy code
+class MyClass {
+  constructor() {
+    this.property = value;
+  }
+}
+const obj = new MyClass();
+
+5: Literal ways?
+
+This refers to creating objects using the object literal syntax:
+
+const obj = {
+  key: value,
+};
+Constructor function?
+
+A constructor function is a special function used to create and initialize objects:
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+const person1 = new Person('John', 25);
+Example to print?
+
+To print the properties of an object:
+
+const person = { name: 'John', age: 25 };
+console.log(person.name); // Output: John
+console.log(person.age);  // Output: 25
+Add a property?
+
+8: To add a property to an existing object:
+
+obj.newProperty = 'newValue';
+// Or
+obj['newProperty'] = 'newValue';
+9: How to modify a property?
+
+To modify an existing property:
+
+obj.property = 'newValue';
+Delete a property?
+
+10: To delete a property from an object using the delete operator:
+
+delete obj.property;
+Only keys?
+
+11: To get only the keys of an object, use Object.keys():
+javascript
+Copy code
+const keys = Object.keys(obj);
+console.log(keys);
+Only values?
+
+12: To get only the values of an object, use Object.values():
+
+const values = Object.values(obj);
+console.log(values);
+Boolean properties?
+
+13: A boolean property in an object is a key that stores a boolean value (true or false):
+
+const obj = { isAvailable: true, isAdmin: false };
+console.log(obj.isAvailable); // Output: true
+console.log(obj.isAdmin);    // Output: false
